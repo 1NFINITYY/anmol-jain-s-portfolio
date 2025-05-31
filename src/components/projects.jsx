@@ -3,36 +3,82 @@ import medibotImg from './images/medibot.jpg';
 import zomatoImg from './images/zomato.png';
 import nikeImg from './images/nike.jpg';
 import revenueImg from './images/revenue.jpg';
+import { Link } from "react-router-dom";
 
 
 const projects = [
   {
+    path:"/projects/1",
+    title: "Zomato Restaurant Ratings Analysis",
+    description:
+      "Analyzed how location, price, and online delivery influence Zomato restaurant ratings using Python and Power BI.",
+    techStack: ["Python", "Pandas", "Seaborn", "Power BI"],
+    image: zomatoImg,
+    github: "https://github.com/your-username/zomato-ratings-analysis",
+  },
+  {
+    path:"/projects/2",
+    title: "Customer Churn Prediction",
+    description:
+      "Built a machine learning model to identify customers likely to leave a telecom service with 83% accuracy.",
+    techStack: ["Python", "Scikit-learn", "Logistic Regression"],
+    image: revenueImg,
+    github: "https://github.com/your-username/customer-churn-prediction",
+  },
+  {
+    path:"/projects/3",
+    title: "Fake News Detection using NLP",
+    description:
+      "Used Natural Language Processing and Logistic Regression to classify news as fake or real, deployed with Flask.",
+    techStack: ["Python", "NLP", "Logistic Regression", "Flask"],
+    image: revenueImg,
+    github: "https://github.com/your-username/fake-news-detection",
+  },
+  {
+    path:"/projects/4",
+    title: "Sales Forecasting using Time Series",
+    description:
+      "Predicted future retail sales using ARIMA and Prophet models, capturing seasonal trends and holiday effects.",
+    techStack: ["Python", "Prophet", "ARIMA", "Statsmodels"],
+    image: revenueImg,
+    github: "https://github.com/your-username/sales-forecasting",
+  },
+  {
+    path:"/projects/5",
+    title: "Customer Segmentation with K-Means",
+    description:
+      "Clustered customers into behavioral groups using K-Means for targeted marketing and better engagement.",
+    techStack: ["Python", "Sklearn", "Matplotlib"],
+    image: revenueImg,
+    github: "https://github.com/your-username/customer-segmentation",
+  },
+  {
+    path:"/projects/6",
+    title: "Product Review Sentiment Analysis",
+    description:
+      "Performed sentiment analysis on e-commerce reviews using NLP to classify customer satisfaction levels.",
+    techStack: ["Python", "TextBlob", "TF-IDF", "NLTK"],
+    image: revenueImg,
+    github: "https://github.com/your-username/sentiment-analysis",
+  },
+  {
+    path:"/projects/7",
+    title: "Real Estate Price Prediction",
+    description:
+      "Predicted house prices based on location and amenities using XGBoost, improving RMSE by 12%.",
+    techStack: ["Python", "XGBoost", "Scikit-learn", "Pandas"],
+    image: revenueImg,
+    github: "https://github.com/your-username/real-estate-prediction",
+  },
+  {
+    path:"/projects/8",
     title: "MediBot",
-    description: "Disease prediction chatbot using Python and ML with 85% accuracy.",
+    description:
+      "Disease prediction chatbot using Python and ML with 85% accuracy.",
     techStack: ["Python", "Scikit-learn", "NLP"],
     image: medibotImg,
-    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/chatbot_model%20(1).ipynb",
-  },
-  {
-    title: "Nike Nexus",
-    description: "Global sales trend analysis using interactive Power BI dashboards.",
-    techStack: ["Power BI", "Excel", "Data Modeling"],
-    image: nikeImg,
-    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/nike23.pbix",
-  },
-  {
-    title: "Revenue Radar",
-    description: "Sales performance tracking using interactive Power BI visuals.",
-    techStack: ["Power BI", "Data Analysis", "KPIs"],
-    image: revenueImg,
-    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/sales.pbix",
-  },
-  {
-    title: "Zomato Insights Hub",
-    description: "Pricing and customer behavior analysis using Python and SQL.",
-    techStack: ["Python", "SQL", "Pandas"],
-    image: zomatoImg,
-    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/zomato_updated.pbix",
+    github:
+      "https://github.com/ajnmoljain/AnmolJain/blob/main/chatbot_model%20(1).ipynb",
   }
 ];
 
@@ -41,8 +87,10 @@ export default function Projects() {
     <div className="min-h-screen bg-gray-50 py-12 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-gray-800 mb-10">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
+            
+            <Link to ={project.path} >
             <div
               key={idx}
               className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
@@ -80,6 +128,8 @@ export default function Projects() {
                 </div>
               </div>
             </div>
+            </Link>
+            
           ))}
         </div>
       </div>
