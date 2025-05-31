@@ -21,9 +21,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           
           {/* Logo */}
+          <Link to={'/'}>
           <div className="text-xl font-bold text-black dark:text-white">
             ANMOL JAIN
           </div>
+          </Link>
+          
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6 text-gray-800 dark:text-gray-200">

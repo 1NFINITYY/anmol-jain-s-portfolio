@@ -14,7 +14,7 @@ const projects = [
       "Analyzed how location, price, and online delivery influence Zomato restaurant ratings using Python and Power BI.",
     techStack: ["Python", "Pandas", "Seaborn", "Power BI"],
     image: zomatoImg,
-    github: "https://github.com/your-username/zomato-ratings-analysis",
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/zomato_updated.pbix",
   },
   {
     path:"/projects/2",
@@ -23,7 +23,7 @@ const projects = [
       "Built a machine learning model to identify customers likely to leave a telecom service with 83% accuracy.",
     techStack: ["Python", "Scikit-learn", "Logistic Regression"],
     image: revenueImg,
-    github: "https://github.com/your-username/customer-churn-prediction",
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Churn%20prediction%20model.ipynb",
   },
   {
     path:"/projects/3",
@@ -32,7 +32,7 @@ const projects = [
       "Used Natural Language Processing and Logistic Regression to classify news as fake or real, deployed with Flask.",
     techStack: ["Python", "NLP", "Logistic Regression", "Flask"],
     image: revenueImg,
-    github: "https://github.com/your-username/fake-news-detection",
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/fakenews.ipynb",
   },
   {
     path:"/projects/4",
@@ -41,7 +41,7 @@ const projects = [
       "Predicted future retail sales using ARIMA and Prophet models, capturing seasonal trends and holiday effects.",
     techStack: ["Python", "Prophet", "ARIMA", "Statsmodels"],
     image: revenueImg,
-    github: "https://github.com/your-username/sales-forecasting",
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/sales.pbix",
   },
   {
     path:"/projects/5",
@@ -59,7 +59,7 @@ const projects = [
       "Performed sentiment analysis on e-commerce reviews using NLP to classify customer satisfaction levels.",
     techStack: ["Python", "TextBlob", "TF-IDF", "NLTK"],
     image: revenueImg,
-    github: "https://github.com/your-username/sentiment-analysis",
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/restaurant%20sentiment%20analysis.ipynb",
   },
   {
     path:"/projects/7",
@@ -68,7 +68,7 @@ const projects = [
       "Predicted house prices based on location and amenities using XGBoost, improving RMSE by 12%.",
     techStack: ["Python", "XGBoost", "Scikit-learn", "Pandas"],
     image: revenueImg,
-    github: "https://github.com/your-username/real-estate-prediction",
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/laon.ipynb",
   },
   {
     path:"/projects/8",
