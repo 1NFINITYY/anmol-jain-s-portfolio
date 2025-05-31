@@ -1,16 +1,76 @@
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
-const Navbar = () => (
-        <nav className="bg-white shadow-md p-4 flex justify-between">
-          <h1 className="text-xl font-bold">ANMOL JAIN</h1>
-          <div className="space-x-4">
-            <Link to="/" className="hover:text-blue-500">Home</Link>
-            <Link to="/about" className="hover:text-blue-500">About</Link>
-            <Link to="/skills" className="hover:text-blue-500">Skills</Link>
-            <Link to="/projects" className="hover:text-blue-500">Projects</Link>
-            <Link to="/contact" className="hover:text-blue-500">Contact</Link>
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const location = useLocation();
+
+  const links = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Skills', path: '/skills' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          
+          {/* Logo */}
+          <div className="text-xl font-bold text-black dark:text-white">
+            ANMOL JAIN
           </div>
-        </nav>
-);
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex space-x-6 text-gray-800 dark:text-gray-200">
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`hover:text-blue-600 transition duration-200 ${
+                  location.pathname === link.path ? 'font-semibold text-blue-600' : ''
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-800 dark:text-gray-200 focus:outline-none"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden bg-white dark:bg-gray-900 px-4 pb-4 space-y-2">
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className={`block text-gray-800 dark:text-gray-200 hover:text-blue-600 transition-colors duration-200 ${
+                location.pathname === link.path ? 'font-semibold text-blue-600' : ''
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+};
 
 export default Navbar;

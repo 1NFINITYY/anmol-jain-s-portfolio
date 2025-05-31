@@ -1,37 +1,38 @@
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import medibotImg from './images/medibot.jpg';
+import zomatoImg from './images/zomato.png';
+import nikeImg from './images/nike.jpg';
+import revenueImg from './images/revenue.jpg';
+
 
 const projects = [
   {
     title: "MediBot",
     description: "Disease prediction chatbot using Python and ML with 85% accuracy.",
     techStack: ["Python", "Scikit-learn", "NLP"],
-    image: "https://source.unsplash.com/featured/?ai,chatbot",
-    github: "#",
-    demo: "#"
+    image: medibotImg,
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/chatbot_model%20(1).ipynb",
   },
   {
     title: "Nike Nexus",
     description: "Global sales trend analysis using interactive Power BI dashboards.",
     techStack: ["Power BI", "Excel", "Data Modeling"],
-    image: "https://source.unsplash.com/featured/?dashboard,data",
-    github: "#",
-    demo: "#"
+    image: nikeImg,
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/nike23.pbix",
   },
   {
     title: "Revenue Radar",
     description: "Sales performance tracking using interactive Power BI visuals.",
     techStack: ["Power BI", "Data Analysis", "KPIs"],
-    image: "https://source.unsplash.com/featured/?business,report",
-    github: "#",
-    demo: "#"
+    image: revenueImg,
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/sales.pbix",
   },
   {
     title: "Zomato Insights Hub",
     description: "Pricing and customer behavior analysis using Python and SQL.",
     techStack: ["Python", "SQL", "Pandas"],
-    image: "https://source.unsplash.com/featured/?analytics,restaurant",
-    github: "#",
-    demo: "#"
+    image: zomatoImg,
+    github: "https://github.com/ajnmoljain/AnmolJain/blob/main/zomato_updated.pbix",
   }
 ];
 
@@ -49,7 +50,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-48 w-full object-cover"
+                className="h-80 w-full object-cover"
               />
               <div className="p-6 space-y-3">
                 <h3 className="text-2xl font-semibold text-indigo-700">
@@ -75,14 +76,7 @@ export default function Projects() {
                   >
                     <FaGithub className="mr-1" /> GitHub
                   </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-indigo-600 hover:text-indigo-800 transition"
-                  >
-                    <FaExternalLinkAlt className="mr-1" /> Live Demo
-                  </a>
+                  
                 </div>
               </div>
             </div>
