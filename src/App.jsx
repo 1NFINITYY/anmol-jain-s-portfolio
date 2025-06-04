@@ -16,6 +16,15 @@ import SalesForecastCard from "./components/projects/sales";
 import CustomerSegmentationCard from "./components/projects/costumer";
 import SentimentAnalysisCard from "./components/projects/sentiment";
 import RealEstateCard from "./components/projects/realestate";
+import DiscountExcelCard from "./components/projects/discount";
+import SalesSummaryCard from "./components/projects/sales10";
+import DashboardSummaryCard from "./components/projects/dashboard11";
+import MyntraClassificationCard from "./components/projects/myntra12";
+import SpeechToTextCard from "./components/projects/speech14";
+import NikeNexusCard from "./components/projects/nike13";
+import AirlineSatisfactionCard from "./components/projects/airline15";
+import FaceDetectionCard from "./components/projects/face16";
+import MediBotCard from "./components/projects/medibot";
 
 // Layout component wraps all pages
 const Layout = () => (
@@ -42,6 +51,15 @@ const router = createBrowserRouter([
       { path: "/projects/5", element: <CustomerSegmentationCard/> },
       { path: "/projects/6", element: <SentimentAnalysisCard/> },
       { path: "/projects/7", element: <RealEstateCard/> },
+      { path: "/projects/8", element: <MediBotCard/> },
+      { path: "/projects/9", element: <DiscountExcelCard/> },
+      { path: "/projects/10", element: <SalesSummaryCard/> },
+      { path: "/projects/11", element: <DashboardSummaryCard/> },
+      { path: "/projects/12", element: <MyntraClassificationCard/> },
+      { path: "/projects/13", element: <NikeNexusCard/> },
+      { path: "/projects/14", element: <SpeechToTextCard/> },
+      { path: "/projects/15", element: <AirlineSatisfactionCard/> },
+      { path: "/projects/16", element: <FaceDetectionCard/> },
     ]
   }
 ]);

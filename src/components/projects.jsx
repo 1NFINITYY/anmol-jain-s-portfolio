@@ -50,7 +50,7 @@ const projects = [
       "Clustered customers into behavioral groups using K-Means for targeted marketing and better engagement.",
     techStack: ["Python", "Sklearn", "Matplotlib"],
     image: revenueImg,
-    github: "https://github.com/your-username/customer-segmentation",
+    github: "https://github.com/ajnmoljain/customer-segmentation-with-K-means-",
   },
   {
     path:"/projects/6",
@@ -70,6 +70,7 @@ const projects = [
     image: revenueImg,
     github: "https://github.com/ajnmoljain/AnmolJain/blob/main/laon.ipynb",
   },
+  
   {
     path:"/projects/8",
     title: "MediBot",
@@ -79,6 +80,78 @@ const projects = [
     image: medibotImg,
     github:
       "https://github.com/ajnmoljain/AnmolJain/blob/main/chatbot_model%20(1).ipynb",
+  },
+  {
+  path: "/projects/9",
+  title: "Dynamic Discount Calculation Using Excel",
+  description:
+    "Interactive Excel tool using INDEX, MATCH, VLOOKUP & structured references to automate retail price adjustments.",
+  techStack: ["Excel", "INDEX", "MATCH", "VLOOKUP"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Excel%20-%20LOOKUP%2C%20INDEX%2C%20MATCH%2C%20SUMIFS.xlsx"
+  },
+  {
+  path: "/projects/10",
+  title: "Excel Sales Dashboard & Account Performance Analysis",
+  description:
+    "Built a detailed Excel dashboard analyzing individual account managers, regional trends, and customer types using pivot tables, charts, and data logic.",
+  techStack: ["Excel", "Pivot Tables", "Data Visualization", "Charts"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Excel%20-%20Pivot%20Tables%2C%20Pivot%20Chart%2C%20Slicers.xlsx"
+  },
+  {
+  path: "/projects/11",
+  title: "Interactive Excel Sales Dashboard (2015–2018)",
+  description:
+    "Created a multi-filter Excel dashboard using pivot charts to analyze regional, product, and segment-wise sales trends from 2015 to 2018.",
+  techStack: ["Excel", "Pivot Charts", "Dashboard Filters", "Data Visualization"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Excel_Sales_Dashboard_2015_2018.xlsx"
+  },
+  {
+  path: "/projects/12",
+  title: "Myntra Product Classification Model (Machine Learning)",
+  description:
+    "Built a ML model to predict product categories using e-commerce data with algorithms like Logistic Regression, Random Forest, and XGBoost.",
+  techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Seaborn"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/Myntra-sales-analysis"
+  },
+  {
+  path: "/projects/13",
+  title: "Nike Nexus (Power BI)",
+  description:
+    "Built a Power BI dashboard to analyze sales, regional performance, and customer sentiment for Nike Air Jordan 10 Retro, using DAX, Power Query, and visual storytelling techniques.",
+  techStack: ["Power BI", "DAX", "Power Query", "Data Modeling", "Visualization"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/AnmolJain/blob/main/nike23.pbix"
+  },
+  {
+  path: "/projects/14",
+  title: "Speech to Text with Python – Audio Recognition",
+  description:
+    "Developed a speech-to-text system using Python and Google Speech API to transcribe audio files (.wav/.mp3) with noise reduction and error handling.",
+  techStack: ["Python", "SpeechRecognition", "pydub", "librosa", "Google API"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/Speech-to-Text-Recognition-Model"
+  },
+  {
+  path: "/projects/15",
+  title: "Airline Customer Satisfaction Analysis",
+  description:
+    "Analyzed airline passenger data to understand satisfaction drivers using Python, Excel data, and visualization tools like Seaborn and Matplotlib.",
+  techStack: ["Python", "Pandas", "Seaborn", "Matplotlib", "Excel"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/Flight-Delay-Pricing-Prediction-Analysis-using-Python-ML"
+  },
+  {
+  path: "/projects/16",
+  title: "Real-Time Face Detection with OpenCV",
+  description:
+    "Built a real-time face detection system using OpenCV and Haar cascades to identify faces through webcam input and display bounding boxes.",
+  techStack: ["Python", "OpenCV", "Haar Cascades"],
+  image: medibotImg,
+  github: "https://github.com/ajnmoljain/Real-Time-Face-Detection-with-OpenCV"
   }
 ];
 
@@ -90,7 +163,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             
-            <Link to ={project.path} >
+            
             <div
               key={idx}
               className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
@@ -101,9 +174,11 @@ export default function Projects() {
                 className="h-80 w-full object-cover"
               />
               <div className="p-6 space-y-3">
+                <Link to ={project.path} >
                 <h3 className="text-2xl font-semibold text-indigo-700">
                   {project.title}
                 </h3>
+                </Link>
                 <p className="text-gray-600">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {project.techStack.map((tech, tIdx) => (
@@ -128,7 +203,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
-            </Link>
+            
             
           ))}
         </div>

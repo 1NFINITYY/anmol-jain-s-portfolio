@@ -10,7 +10,7 @@ export default function Home() {
           Welcome to <span className="text-pink-500">My Portfolio</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 animate-fade-in-up delay-100">
-          A showcase of my data science, machine learning, and full-stack projects.
+          A showcase of my data science and machine learning.
         </p>
 
         <div className="flex justify-center gap-4 mt-6">
