@@ -1,3 +1,7 @@
+import Img1 from './project-image/13-1.jpg';
+import Img2 from './project-image/13-2.jpg';
+import Img3 from './project-image/13-3.jpg';
+
 export default function NikeNexusCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -57,34 +61,28 @@ export default function NikeNexusCard() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Nike+Sales+Overview"
-                alt="Sales Overview"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Sales KPIs View</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Regional+Bar+Chart"
-                alt="Regional Bar Chart"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Regional Sales Chart</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Customer+Ratings"
-                alt="Customer Sentiment Metrics"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Customer Sentiment</div>
-            </div>
-          </div>
-        </section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Sales Dashboard" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Nike  Sales Dashboard</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img2} alt="Sales Dashboard" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Sales Dashboard</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img3} alt="" className="w-fullSales Dashboard h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Sales Dashboard </div>
+                              </div>
+                            </div>
+                </section>
 
       </div>
     </div>

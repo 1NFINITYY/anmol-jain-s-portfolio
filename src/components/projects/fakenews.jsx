@@ -1,3 +1,7 @@
+import fake1Img from './project-image/fake1.jpg';
+import fake2Img from './project-image/fake2.jpg';
+import fake3Img from './project-image/fake3.jpg';
+
 export default function FakeNewsCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -51,28 +55,34 @@ export default function FakeNewsCard() {
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={fake1Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=WordCloud"
+                src={fake1Img}
                 alt="Word Cloud"
                 className="w-full h-32 object-cover"
               />
+              </a>
               <div className="p-2 text-sm font-medium text-center">Word Cloud Visualization</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={fake2Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=TF-IDF+vs+BoW"
-                alt="TF-IDF vs BoW"
+                src={fake2Img}
+                alt="Types of subject in fake news"
                 className="w-full h-32 object-cover"
               />
-              <div className="p-2 text-sm font-medium text-center">TF-IDF vs BoW Chart</div>
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Types of subject in fake news</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={fake3Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=Flask+App+Demo"
-                alt="Flask App Screenshot"
+                src={fake3Img}
+                alt="Model Accuracies"
                 className="w-full h-32 object-cover"
               />
-              <div className="p-2 text-sm font-medium text-center">Flask App Screenshot</div>
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Model Accuracies</div>
             </div>
           </div>
         </section>

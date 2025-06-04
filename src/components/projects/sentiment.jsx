@@ -1,3 +1,7 @@
+import Img1 from './project-image/6-1.jpg';
+import Img2 from './project-image/6-2.jpg';
+import Img3 from './project-image/6-3.jpg';
+
 export default function SentimentAnalysisCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -40,28 +44,22 @@ export default function SentimentAnalysisCard() {
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Word+Cloud"
-                alt="Word Cloud"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Positive & Negative Word Clouds</div>
+              <a href={Img1} target="_blank" rel="noopener noreferrer">
+                <img src={Img1} alt="Svm Confusion Matrix" className="w-full h-32 object-cover" />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Svm Confusion Matrix</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Sentiment+Pie+Chart"
-                alt="Sentiment Pie Chart"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Sentiment Distribution Pie Chart</div>
+              <a href={Img2} target="_blank" rel="noopener noreferrer">
+                <img src={Img2} alt="Naive Bayes Cm" className="w-full h-32 object-cover" />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Naive Bayes Cm</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=TF-IDF+Keywords"
-                alt="TF-IDF Chart"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">TF-IDF Keyword Chart</div>
+              <a href={Img3} target="_blank" rel="noopener noreferrer">
+                <img src={Img3} alt="Confusion Matrix" className="w-full h-32 object-cover" />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Confusion Matrix </div>
             </div>
           </div>
         </section>

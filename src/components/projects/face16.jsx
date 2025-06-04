@@ -1,3 +1,7 @@
+import Img1 from './project-image/16-1.jpg';
+import Img2 from './project-image/16-2.jpg';
+import Img3 from './project-image/16-3.jpg';
+
 export default function FaceDetectionCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -54,26 +58,28 @@ export default function FaceDetectionCard() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Face+Detection+Live+Feed"
-                alt="Live Face Detection"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Live Detection Example</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Haar+Cascade+Preview"
-                alt="Haar Cascade XML"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Haar Cascade Usage</div>
-            </div>
-          </div>
-        </section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Facial Recognition" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Facial Recognition</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img2} alt="Face Detection" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Face Detection</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img3} alt="Deep Learning Pipeline" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Deep Learning Pipeline</div>
+                              </div>
+                            </div>
+                </section>
 
       </div>
     </div>

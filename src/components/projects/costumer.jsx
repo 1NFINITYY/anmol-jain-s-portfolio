@@ -1,3 +1,7 @@
+import Img1 from './project-image/5-1.jpg';
+import Img2 from './project-image/5-2.jpg';
+import Img3 from './project-image/5-3.jpg';
+
 export default function CustomerSegmentationCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -40,28 +44,34 @@ export default function CustomerSegmentationCard() {
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Cluster+2D+Plot"
-                alt="Cluster Visualization"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">2D Cluster Visualization</div>
+              <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                          <img
+                                           src={Img1}
+                                            alt="Segmentation Analysis"
+                                            className="w-full h-32 object-cover"
+                                          />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Segmentation Analysis</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Radar+Chart"
-                alt="Radar Chart"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Radar Chart of Cluster Behavior</div>
+              <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                          <img
+                                           src={Img2}
+                                            alt="Distribution of Annual Income"
+                                            className="w-full h-32 object-cover"
+                                          />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Distribution of Annual Income</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Customer+Profiles"
-                alt="Customer Profiles"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Customer Profile Cards</div>
+              <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                          <img
+                                           src={Img3}
+                                            alt="K-Value Analysis"
+                                            className="w-full h-32 object-cover"
+                                          />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">K-Value Analysis</div>
             </div>
           </div>
         </section>

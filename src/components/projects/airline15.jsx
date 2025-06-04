@@ -1,3 +1,7 @@
+import Img1 from './project-image/15-1.jpg';
+import Img2 from './project-image/15-2.jpg';
+import Img3 from './project-image/15-3.jpg';
+
 export default function AirlineSatisfactionCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -53,34 +57,28 @@ export default function AirlineSatisfactionCard() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Heatmap+Correlations"
-                alt="Correlation Heatmap"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Correlation Heatmap</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Rating+Distribution"
-                alt="Ratings Distribution"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Ratings Distribution</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Travel+Type+Satisfaction"
-                alt="Satisfaction by Travel Type"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Satisfaction by Travel Type</div>
-            </div>
-          </div>
-        </section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Flight Price Distribution by Airline" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Flight Price Distribution by Airline </div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img2} alt="Future Importance" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Future Importance</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img3} alt="Destination Analysis" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Destination Analysis</div>
+                              </div>
+                            </div>
+                </section>
 
       </div>
     </div>

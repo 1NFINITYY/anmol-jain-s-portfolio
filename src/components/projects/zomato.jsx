@@ -1,3 +1,6 @@
+import zomato1Img from './project-image/zomato1.jpg';
+import zomato2Img from './project-image/zomato2.jpg';
+
 export default function ZomatoCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -51,29 +54,26 @@ export default function ZomatoCard() {
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={zomato1Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=Dashboard"
+                src={zomato1Img}
                 alt="Dashboard"
                 className="w-full h-32 object-cover"
               />
-              <div className="p-2 text-sm font-medium text-center">Data Dashboard</div>
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Data Dashboard 1</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={zomato2Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=Power+BI+Visual"
-                alt="Power BI"
+                src={zomato2Img}
+                alt="Dashboard"
                 className="w-full h-32 object-cover"
               />
-              <div className="p-2 text-sm font-medium text-center">Power BI Snippet</div>
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Data Dashboard 2</div>
             </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Zomato+UI"
-                alt="Zomato UI"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Zomato App Mockup</div>
-            </div>
+            
           </div>
         </section>
       </div>

@@ -1,3 +1,7 @@
+import Img1 from './project-image/9-1.jpg';
+import Img2 from './project-image/9-2.jpg';
+import Img3 from './project-image/9-3.jpg';
+
 export default function DiscountExcelCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -42,32 +46,20 @@ export default function DiscountExcelCard() {
 
         <section>
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Discount+Matrix"
-                alt="Discount Matrix"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Discount Matrix Table</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Lookup+Mapping"
-                alt="Lookup Mapping"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Lookup Mapping Logic</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Final+Price+Calc"
-                alt="Price Calculation"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Final Price Calculation</div>
-            </div>
-          </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                      <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                        <a href={Img1} target="_blank" rel="noopener noreferrer">
+                          <img src={Img1} alt="Document Matrix" className="w-full h-32 object-cover" />
+                        </a>
+                        <div className="p-2 text-sm font-medium text-center">Document Matrix</div>
+                      </div>
+                      <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                        <a href={Img3} target="_blank" rel="noopener noreferrer">
+                          <img src={Img3} alt="LOOKUP Formulae" className="w-full h-32 object-cover" />
+                        </a>
+                        <div className="p-2 text-sm font-medium text-center">LOOKUP Formulae</div>
+                      </div>
+             </div>
         </section>
       </div>
     </div>

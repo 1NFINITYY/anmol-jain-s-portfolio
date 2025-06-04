@@ -1,3 +1,7 @@
+import Img1 from './project-image/10-1.jpg';
+import Img2 from './project-image/10-2.jpg';
+import Img3 from './project-image/10-3.jpg';
+
 export default function SalesSummaryCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -35,34 +39,28 @@ export default function SalesSummaryCard() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Sales+Trend+Chart"
-                alt="Line Chart - Regional Sales"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Line Chart: Sales Trend by Region</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Customer+Type+Pie"
-                alt="Pie Chart - Customer Types"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Pie Chart: Customer Type Distribution</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Manager+Performance"
-                alt="Bar Chart - Manager Sales"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Bar Chart: Account Manager Performance</div>
-            </div>
-          </div>
-        </section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Excel Worksheet" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Excel Worksheet</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img2} alt="Dashboard" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Dashboard</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img3} alt="Excel Worksheet" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Excel Worksheet </div>
+                              </div>
+                            </div>
+                </section>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import Img1 from './project-image/11-1.jpg';
+
 export default function DashboardSummaryCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -66,35 +68,17 @@ export default function DashboardSummaryCard() {
           </ul>
         </section>
 
-        <section>
-          <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Line+Chart"
-                alt="Sales Trend Line Chart"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Sales Trend Over Time</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Donut+Chart"
-                alt="Sales by Region"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Regional Sales Distribution</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Tree+Map"
-                alt="Segment Sales Treemap"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Segment-wise Contribution</div>
-            </div>
-          </div>
-        </section>
+                <section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className=" ">
+                              <div className="bg-gray-100 rounded-lg shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Sales Performance Dashboard" className="w-full h-full object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Sales Performance Dashboard</div>
+                              </div>
+                   </div>           
+                </section>
       </div>
     </div>
   );

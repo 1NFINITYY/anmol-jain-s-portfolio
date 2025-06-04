@@ -1,3 +1,8 @@
+import churn1Img from './project-image/churn1.jpg';
+import churn2Img from './project-image/churn2.jpg';
+import churn3Img from './project-image/churn3.jpg';
+import churn4Img from './project-image/churn4.jpg';
+
 export default function ChurnPredictionCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -51,28 +56,44 @@ export default function ChurnPredictionCard() {
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={churn1Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=Flowchart"
+                src={churn1Img}
                 alt="Churn Model Flowchart"
                 className="w-full h-32 object-cover"
               />
+              </a>
               <div className="p-2 text-sm font-medium text-center">Churn Model Flowchart</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={churn2Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=ROC+%26+Confusion+Matrix"
-                alt="ROC and Confusion Matrix"
+                src={churn2Img}
+                alt="Confusion Matrix for Decision Tree"
                 className="w-full h-32 object-cover"
               />
-              <div className="p-2 text-sm font-medium text-center">ROC & Confusion Matrix</div>
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Confusion Matrix for Decision Tree</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={churn3Img} target="_blank" rel="noopener noreferrer">
               <img
-                src="https://via.placeholder.com/300x200?text=Dashboard"
-                alt="Churn Dashboard"
+                src={churn3Img}
+                alt="Confusion Matrix for Forest Classifier"
                 className="w-full h-32 object-cover"
               />
-              <div className="p-2 text-sm font-medium text-center">Churn Flag Dashboard</div>
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Confusion Matrix for Forest Classifier</div>
+            </div>
+            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+              <a href={churn4Img} target="_blank" rel="noopener noreferrer">
+              <img
+                src={churn4Img}
+                alt="Kernal Density Estimate of actual vs fitted values"
+                className="w-full h-32 object-cover"
+              />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Kernal Density Estimate of actual vs fitted values</div>
             </div>
           </div>
         </section>

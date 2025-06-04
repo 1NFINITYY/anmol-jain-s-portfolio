@@ -1,3 +1,7 @@
+import sales1Img from './project-image/sales4-1.jpg';
+import sales2Img from './project-image/sales4-2.jpg';
+import sales3Img from './project-image/sales4-3.jpg';
+
 export default function SalesForecastCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -41,28 +45,34 @@ export default function SalesForecastCard() {
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Time+Series+Plot"
-                alt="Time Series Line Plot"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Time Series Line Plot</div>
+              <a href={sales1Img} target="_blank" rel="noopener noreferrer">
+                            <img
+                             src={sales1Img}
+                              alt="Sales Analysis by Year"
+                              className="w-full h-32 object-cover"
+                            />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Sales Analysis by Year</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Forecast+vs+Actual"
-                alt="Forecast vs Actual"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Forecast vs Actual Plot</div>
+              <a href={sales2Img} target="_blank" rel="noopener noreferrer">
+                            <img
+                             src={sales2Img}
+                              alt="Channel Analysis"
+                              className="w-full h-32 object-cover"
+                            />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Channel Analysis</div>
             </div>
             <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Prophet+Components"
-                alt="Prophet Components"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Prophet Components Plot</div>
+              <a href={sales3Img} target="_blank" rel="noopener noreferrer">
+                            <img
+                             src={sales3Img}
+                              alt="Correlation Matrix"
+                              className="w-full h-32 object-cover"
+                            />
+              </a>
+              <div className="p-2 text-sm font-medium text-center">Correlation Matrix</div>
             </div>
           </div>
         </section>

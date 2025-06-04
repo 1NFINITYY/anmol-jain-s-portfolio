@@ -1,3 +1,7 @@
+import Img1 from './project-image/14-1.jpg';
+import Img2 from './project-image/14-2.jpg';
+import Img3 from './project-image/14-3.jpg';
+
 export default function SpeechToTextCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -50,34 +54,28 @@ export default function SpeechToTextCard() {
         </section>
 
         <section>
-          <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Audio+Waveform"
-                alt="Audio waveform"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Audio Waveform View</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Live+Transcription"
-                alt="Live transcription demo"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Live Transcription Demo</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Architecture+Diagram"
-                alt="Architecture Diagram"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">STT Architecture</div>
-            </div>
-          </div>
-        </section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Speech Recognition Accuracy OverTime" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Speech Recognition Accuracy OverTime</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img2} alt="Speech Recognition Accuracy OverTime" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Speech Recognition Accuracy OverTime</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img3} alt="Voice Amplitude Over Time" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Voice Amplitude Over Time</div>
+                              </div>
+                            </div>
+                </section>
 
       </div>
     </div>

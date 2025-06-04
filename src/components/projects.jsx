@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import medibotImg from './images/medibot.jpg';
+import churnImg from './images/churn.jpg';
 import zomatoImg from './images/zomato.png';
 import nikeImg from './images/nike.jpg';
 import revenueImg from './images/revenue.jpg';
@@ -22,7 +23,7 @@ const projects = [
     description:
       "Built a machine learning model to identify customers likely to leave a telecom service with 83% accuracy.",
     techStack: ["Python", "Scikit-learn", "Logistic Regression"],
-    image: revenueImg,
+    image: churnImg,
     github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Churn%20prediction%20model.ipynb",
   },
   {

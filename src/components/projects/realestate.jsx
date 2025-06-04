@@ -1,3 +1,7 @@
+import Img1 from './project-image/7-1.jpg';
+import Img2 from './project-image/7-2.jpg';
+import Img3 from './project-image/7-3.jpg';
+
 export default function RealEstateCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -39,31 +43,25 @@ export default function RealEstateCard() {
         <section>
           <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Feature+Importance+Bar+Chart"
-                alt="Feature Importance Bar Chart"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Feature Importance Bar Chart</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Predicted+vs+Actual+Prices"
-                alt="Predicted vs Actual"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Predicted vs Actual Prices</div>
-            </div>
-            <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
-              <img
-                src="https://via.placeholder.com/300x200?text=Map+of+House+Locations"
-                alt="House Map"
-                className="w-full h-32 object-cover"
-              />
-              <div className="p-2 text-sm font-medium text-center">Map of House Locations</div>
-            </div>
-          </div>
+                      <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                        <a href={Img1} target="_blank" rel="noopener noreferrer">
+                          <img src={Img1} alt="Co-linearity Graph" className="w-full h-32 object-cover" />
+                        </a>
+                        <div className="p-2 text-sm font-medium text-center">Co-linearity Graph</div>
+                      </div>
+                      <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                        <a href={Img2} target="_blank" rel="noopener noreferrer">
+                          <img src={Img2} alt="Confusion Matrix" className="w-full h-32 object-cover" />
+                        </a>
+                        <div className="p-2 text-sm font-medium text-center">Confusion Matrix</div>
+                      </div>
+                      <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                        <a href={Img3} target="_blank" rel="noopener noreferrer">
+                          <img src={Img3} alt="Model Accuracy Graph" className="w-full h-32 object-cover" />
+                        </a>
+                        <div className="p-2 text-sm font-medium text-center">Model Accuracy Graph </div>
+                      </div>
+                    </div>
         </section>
       </div>
     </div>

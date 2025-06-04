@@ -1,3 +1,7 @@
+import Img1 from './project-image/8-1.jpg';
+import Img2 from './project-image/8-2.jpg';
+import Img3 from './project-image/8-3.jpg';
+
 export default function MediBotCard() {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-2xl border border-gray-200">
@@ -76,6 +80,30 @@ export default function MediBotCard() {
             A locally deployed prototype chatbot ready for real-world use. Can be adapted to other domains with minor retraining. A strong foundation toward a scalable AI-based healthcare assistant.
           </p>
         </section>
+
+        <section>
+                  <h3 className="font-semibold text-lg">🖼 Image Suggestions:</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img1} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img1} alt="Learning Model Rate" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Learning Model Rate</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img2} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img2} alt="Co-Linearity Graph" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Co-Linearity Graph</div>
+                              </div>
+                              <div className="bg-gray-100 rounded-lg overflow-hidden shadow">
+                                <a href={Img3} target="_blank" rel="noopener noreferrer">
+                                  <img src={Img3} alt="Learning Rate 2" className="w-full h-32 object-cover" />
+                                </a>
+                                <div className="p-2 text-sm font-medium text-center">Learning Rate 2</div>
+                              </div>
+                            </div>
+                </section>
 
       </div>
     </div>
