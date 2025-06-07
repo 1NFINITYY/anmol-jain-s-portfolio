@@ -1,7 +1,14 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function Home() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "AnmolJain_Resume.pdf";
+    link.click();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white flex flex-col justify-center items-center px-4">
       {/* Hero Section */}
@@ -13,7 +20,7 @@ export default function Home() {
           A showcase of my data science and machine learning.
         </p>
 
-        <div className="flex justify-center gap-4 mt-6">
+        <div className="flex justify-center flex-wrap gap-4 mt-6">
           <Link
             to="/projects"
             className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all duration-300"
@@ -26,10 +33,15 @@ export default function Home() {
           >
             Contact Me
           </Link>
+          <button
+            onClick={handleDownload}
+            className="bg-blue-600 hover:bg-blue-700 active:scale-95 active:bg-blue-800 text-white px-6 py-3 rounded-full flex items-center gap-2 transition-all duration-200 shadow-md cursor-pointer"
+          >
+            <Download className="w-4 h-4" />
+            Download Resume
+          </button>
         </div>
       </div>
-
-      
     </div>
   );
 }
