@@ -12,7 +12,7 @@ const Contact = () => {
     const formData = { name, email, message };
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://anmol-portfolio-srqi.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
