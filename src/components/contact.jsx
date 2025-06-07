@@ -1,6 +1,40 @@
+import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = { name, email, message };
+
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        alert("Message sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Server error!");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-12 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-white p-10 rounded-3xl shadow-lg">
@@ -42,25 +76,34 @@ const Contact = () => {
         {/* Contact Form */}
         <div>
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Send a Message</h3>
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               placeholder="Your Name"
               className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              required
             />
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
               className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              required
             />
             <textarea
               rows="5"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Your Message"
               className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              required
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition"
+              className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition cursor-pointer"
             >
               Send Message
             </button>
