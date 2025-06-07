@@ -1,10 +1,22 @@
+import { Link } from "react-router-dom";
+
 import { FaGithub } from "react-icons/fa";
-import medibotImg from './images/medibot.jpg';
+import medibotImg from './images/image8.jpg';
 import churnImg from './images/churn.jpg';
 import zomatoImg from './images/zomato.png';
-import nikeImg from './images/nike.jpg';
-import revenueImg from './images/revenue.jpg';
-import { Link } from "react-router-dom";
+import fakenewsImg from './images/fake-news.jpg';
+import Img4 from './images/sales4.jpg';
+import Img5 from './images/customer5.png';
+import Img6 from './images/product6.png';
+import Img7 from './images/real7.jpg';
+import Img9 from './images/dynamic9.png';
+import Img10 from './images/sales10.webp';
+import Img11 from './images/sales11.png';
+import Img12 from './images/myntra12.jpg';
+import Img13 from './images/nike.jpg';
+import Img14 from './images/speech14.jpg';
+import Img15 from './images/airline15.png';
+import Img16 from './images/face16.png';
 
 
 const projects = [
@@ -32,7 +44,7 @@ const projects = [
     description:
       "Used Natural Language Processing and Logistic Regression to classify news as fake or real, deployed with Flask.",
     techStack: ["Python", "NLP", "Logistic Regression", "Flask"],
-    image: revenueImg,
+    image: fakenewsImg,
     github: "https://github.com/ajnmoljain/AnmolJain/blob/main/fakenews.ipynb",
   },
   {
@@ -41,7 +53,7 @@ const projects = [
     description:
       "Predicted future retail sales using ARIMA and Prophet models, capturing seasonal trends and holiday effects.",
     techStack: ["Python", "Prophet", "ARIMA", "Statsmodels"],
-    image: revenueImg,
+    image: Img4,
     github: "https://github.com/ajnmoljain/AnmolJain/blob/main/sales.pbix",
   },
   {
@@ -50,7 +62,7 @@ const projects = [
     description:
       "Clustered customers into behavioral groups using K-Means for targeted marketing and better engagement.",
     techStack: ["Python", "Sklearn", "Matplotlib"],
-    image: revenueImg,
+    image: Img5,
     github: "https://github.com/ajnmoljain/customer-segmentation-with-K-means-",
   },
   {
@@ -59,7 +71,7 @@ const projects = [
     description:
       "Performed sentiment analysis on e-commerce reviews using NLP to classify customer satisfaction levels.",
     techStack: ["Python", "TextBlob", "TF-IDF", "NLTK"],
-    image: revenueImg,
+    image: Img6,
     github: "https://github.com/ajnmoljain/AnmolJain/blob/main/restaurant%20sentiment%20analysis.ipynb",
   },
   {
@@ -68,7 +80,7 @@ const projects = [
     description:
       "Predicted house prices based on location and amenities using XGBoost, improving RMSE by 12%.",
     techStack: ["Python", "XGBoost", "Scikit-learn", "Pandas"],
-    image: revenueImg,
+    image: Img7,
     github: "https://github.com/ajnmoljain/AnmolJain/blob/main/laon.ipynb",
   },
   
@@ -88,7 +100,7 @@ const projects = [
   description:
     "Interactive Excel tool using INDEX, MATCH, VLOOKUP & structured references to automate retail price adjustments.",
   techStack: ["Excel", "INDEX", "MATCH", "VLOOKUP"],
-  image: medibotImg,
+  image: Img9,
   github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Excel%20-%20LOOKUP%2C%20INDEX%2C%20MATCH%2C%20SUMIFS.xlsx"
   },
   {
@@ -97,7 +109,7 @@ const projects = [
   description:
     "Built a detailed Excel dashboard analyzing individual account managers, regional trends, and customer types using pivot tables, charts, and data logic.",
   techStack: ["Excel", "Pivot Tables", "Data Visualization", "Charts"],
-  image: medibotImg,
+  image: Img10,
   github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Excel%20-%20Pivot%20Tables%2C%20Pivot%20Chart%2C%20Slicers.xlsx"
   },
   {
@@ -106,7 +118,7 @@ const projects = [
   description:
     "Created a multi-filter Excel dashboard using pivot charts to analyze regional, product, and segment-wise sales trends from 2015 to 2018.",
   techStack: ["Excel", "Pivot Charts", "Dashboard Filters", "Data Visualization"],
-  image: medibotImg,
+  image: Img11,
   github: "https://github.com/ajnmoljain/AnmolJain/blob/main/Excel_Sales_Dashboard_2015_2018.xlsx"
   },
   {
@@ -115,7 +127,7 @@ const projects = [
   description:
     "Built a ML model to predict product categories using e-commerce data with algorithms like Logistic Regression, Random Forest, and XGBoost.",
   techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Seaborn"],
-  image: medibotImg,
+  image: Img12,
   github: "https://github.com/ajnmoljain/Myntra-sales-analysis"
   },
   {
@@ -124,7 +136,7 @@ const projects = [
   description:
     "Built a Power BI dashboard to analyze sales, regional performance, and customer sentiment for Nike Air Jordan 10 Retro, using DAX, Power Query, and visual storytelling techniques.",
   techStack: ["Power BI", "DAX", "Power Query", "Data Modeling", "Visualization"],
-  image: medibotImg,
+  image: Img13,
   github: "https://github.com/ajnmoljain/AnmolJain/blob/main/nike23.pbix"
   },
   {
@@ -133,7 +145,7 @@ const projects = [
   description:
     "Developed a speech-to-text system using Python and Google Speech API to transcribe audio files (.wav/.mp3) with noise reduction and error handling.",
   techStack: ["Python", "SpeechRecognition", "pydub", "librosa", "Google API"],
-  image: medibotImg,
+  image: Img14,
   github: "https://github.com/ajnmoljain/Speech-to-Text-Recognition-Model"
   },
   {
@@ -142,7 +154,7 @@ const projects = [
   description:
     "Analyzed airline passenger data to understand satisfaction drivers using Python, Excel data, and visualization tools like Seaborn and Matplotlib.",
   techStack: ["Python", "Pandas", "Seaborn", "Matplotlib", "Excel"],
-  image: medibotImg,
+  image: Img15,
   github: "https://github.com/ajnmoljain/Flight-Delay-Pricing-Prediction-Analysis-using-Python-ML"
   },
   {
@@ -151,7 +163,7 @@ const projects = [
   description:
     "Built a real-time face detection system using OpenCV and Haar cascades to identify faces through webcam input and display bounding boxes.",
   techStack: ["Python", "OpenCV", "Haar Cascades"],
-  image: medibotImg,
+  image: Img16,
   github: "https://github.com/ajnmoljain/Real-Time-Face-Detection-with-OpenCV"
   }
 ];
@@ -172,7 +184,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-80 w-full object-cover"
+                className="h-60 w-full object-cover"
               />
               <div className="p-6 space-y-3">
                 <Link to ={project.path} >
