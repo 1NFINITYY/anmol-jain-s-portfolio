@@ -1,44 +1,48 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin } from "react-icons/fa";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const formData = { name, email, message };
+    setLoading(true);
 
     try {
-      const res = await fetch("https://anmol-portfolio-srqi.onrender.com/api/contact", {
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ name, email, message }),
       });
 
       const result = await res.json();
+
       if (result.success) {
-        alert("Message sent successfully!");
+        alert("Message sent! Check your email 📩");
         setName("");
         setEmail("");
         setMessage("");
       } else {
-        alert("Failed to send message.");
+        alert("Failed to send message");
       }
     } catch (error) {
-      console.error("Error:", error);
-      alert("Server error!");
+      alert("Server error");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-12 px-6">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-white p-10 rounded-3xl shadow-lg">
-        
+
         {/* Contact Info */}
         <div className="space-y-6">
           <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b pb-2">Contact</h2>
@@ -82,7 +86,7 @@ const Contact = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your Name"
-              className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full p-3 rounded-xl border border-gray-300"
               required
             />
             <input
@@ -90,7 +94,7 @@ const Contact = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your Email"
-              className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full p-3 rounded-xl border border-gray-300"
               required
             />
             <textarea
@@ -98,17 +102,19 @@ const Contact = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Your Message"
-              className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full p-3 rounded-xl border border-gray-300"
               required
             ></textarea>
             <button
               type="submit"
-              className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition cursor-pointer"
+              disabled={loading}
+              className="w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
+
       </div>
     </div>
   );
