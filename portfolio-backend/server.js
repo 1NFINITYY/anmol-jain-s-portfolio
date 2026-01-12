@@ -22,7 +22,7 @@ app.post("/api/contact", async (req, res) => {
   try {
     await resend.emails.send({
       from: "Portfolio <onboarding@resend.dev>",
-      to: "anant606060@gmail.com", // ✅ YOUR EMAIL
+      to: "ajanmol22@gmail.com", // ✅ YOUR EMAIL
       subject: "📩 New Contact Form Message",
       html: `
         <h2>New Contact Message</h2>
